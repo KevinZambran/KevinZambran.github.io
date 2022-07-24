@@ -171,11 +171,12 @@ nav ul li a:hover {
         width: 100%;
         height: 100vh;
         background: #0330c5;
-        top: 60px;
+        top: 65px;
         left: 100%;
         text-align: center;
         transition: all 0.5s;
-        margin-left: 10px;
+        margin-left: 15px;
+        padding: 0;
     }
     .menu .menu-ul .menu-li {
         display: block;
@@ -195,13 +196,13 @@ nav ul li a:hover {
     }
     .nav-menu_visible {
         left: 0;
-        margin-left: -10px;
+        margin-left: 0px;
     }
     /* Presentacion */
     .presentacion {
         display: block;
         padding: 5px;
-        height: 450px;
+        height: auto;
     }
     .titulo {
         font-size: 40px;
@@ -239,7 +240,8 @@ nav ul li a:hover {
     .presentacion {
         display: block;
         padding: 5px;
-        height: 550px;
+        height: auto;
+        background-color: #000;
     }
 }
 
@@ -253,12 +255,24 @@ nav ul li a:hover {
     padding: 5px;
 }
 
+.listaInfo {
+    padding: 0;
+}
+
 .dato-list {
     list-style: none;
     font-family: var(--fontContent);
     color: white;
     font-size: 35px;
     padding: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .datos {
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 
@@ -273,16 +287,17 @@ nav ul li a:hover {
 }
 
 .lenguajeItems {
-    height: 250px;
-    background-color: #000;
+    height: 230px;
+    background-color: #00000075;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 30px;
 }
 
 .imgLenguajes {
     width: 150px;
     height: 150px;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 .labelLenguajes {
@@ -469,4 +484,22 @@ nav ul li a:hover {
 .ZMK {
     color: white;
     bottom: 0;
+}
+
+.itemRedes {
+    padding: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .redes ul li {
+        width: 110px;
+        height: 110px;
+        line-height: 125px;
+        margin: 29px 20px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 5px solid #d8e2dc;
+        transition: all 0.5s ease;
+    }
 }

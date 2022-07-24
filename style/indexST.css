@@ -1,0 +1,472 @@
+:root {
+    /* colores */
+    --fondo: #0A1045;
+    --navcolor: #F9E900;
+    --titulos: #00C2D1;
+    --subTitulos: #ED33B9;
+    --fondoAux: #F6AF65;
+    /* Fuentes */
+    --fontTitle: 'Bangers', cursive;
+    --fontContent: 'Tapestry', cursive;
+    /* Tamaño de fuente */
+    --subtitleSize: 30px;
+}
+
+body {
+    background: var(--fondo);
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+}
+
+nav ul {
+    padding-right: 20%;
+}
+
+.logo {
+    color: red;
+    font-size: 20px;
+}
+
+span {
+    color: var(--navcolor);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5% 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--navcolor);
+    transition: .3s;
+}
+
+.presentacion {
+    display: flex;
+    height: 500px;
+}
+
+.present {
+    padding-top: 10px;
+    float: left;
+    width: 50%;
+    height: 488px;
+}
+
+.figura {
+    float: right;
+    width: 50%;
+    border-left: 200px solid transparent;
+    border-bottom: 500px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.imagenLogo {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logoZMK {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.titulo {
+    font-family: var(--fontTitle);
+    font-size: 80px;
+    color: white;
+    padding-left: 70px
+}
+
+.parrafo {
+    font-family: var(--fontContent);
+    font-size: 15px;
+    color: white;
+    padding-left: 70px;
+    text-align: justify;
+}
+
+.Contenido {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.checkbtn {
+    font-size: 36px;
+    color: rgb(190, 0, 0);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.subtitulo {
+    color: var(--subTitulos);
+    padding: 2px
+}
+
+@media screen and (max-width: 1100px) {
+    .titulo {
+        font-size: 60px;
+        text-align: center;
+        padding-left: 0;
+        padding: 10px;
+    }
+    .parrafo {
+        padding-left: 0;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .titulo {
+        font-size: 50px;
+        text-align: center;
+        padding-left: 0;
+        padding: 10px;
+    }
+    .parrafo {
+        padding-left: 0;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Menu */
+    .checkbtn {
+        display: block;
+        padding-right: 50px;
+    }
+    .menu {
+        background: #000;
+    }
+    .menu-ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0330c5;
+        top: 60px;
+        left: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+    .menu .menu-ul .menu-li {
+        display: block;
+        margin: 50px;
+        line-height: 15px;
+    }
+    .menu .menu-ul .menu-li .menu-a {
+        font-size: 20px;
+    }
+    .menu-li .menu-a:hover,
+    .menu-li .menu-a.active {
+        background: none;
+        color: red;
+    }
+    #check:checked~.menu-ul {
+        left: 0;
+    }
+    .nav-menu_visible {
+        left: 0;
+        margin-left: -10px;
+    }
+    /* Presentacion */
+    .presentacion {
+        display: block;
+        padding: 5px;
+        height: 450px;
+    }
+    .titulo {
+        font-size: 40px;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 60px;
+        padding: 10px;
+    }
+    .parrafo {
+        padding-left: 0;
+        padding: 10px;
+    }
+    .present {
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+    .figura {
+        width: 100%;
+        height: 200px;
+        border: 0;
+        display: inline;
+    }
+    .imagenLogo {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .logoZMK {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .presentacion {
+        display: block;
+        padding: 5px;
+        height: 550px;
+    }
+}
+
+
+/* Infomacion */
+
+.datos {
+    height: auto;
+    background-color: #080c33;
+    text-align: center;
+    padding: 5px;
+}
+
+.dato-list {
+    list-style: none;
+    font-family: var(--fontContent);
+    color: white;
+    font-size: 35px;
+    padding: 5px;
+}
+
+
+/* Lenguajes aprendidos */
+
+.lenguajeslist {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lenguajeItems {
+    height: 250px;
+    background-color: #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.imgLenguajes {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+}
+
+.labelLenguajes {
+    color: white;
+    display: block;
+    font-size: 35px;
+    font-family: var(--fontContent);
+    padding: 3px;
+}
+
+
+/* Proyectos */
+
+.Contenido2 {
+    background: #080c33;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.listProyectos {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.proyectoItem {
+    width: 550px;
+    height: 200px;
+    background-color: rgba(20, 24, 96, 0.649);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.imgGitHub {
+    background-color: white;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descripcion {
+    width: 65%;
+    float: right;
+}
+
+.imgGit {
+    width: 180px;
+    height: 100px;
+}
+
+.descripcionProy {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.circulo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+
+.leng {
+    height: 25px;
+    margin-left: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkproyecto {
+    height: 20px;
+    font-size: 25px;
+    text-align: right;
+    font-family: var(--fontContent);
+    padding-right: 20px;
+}
+
+.linkGit {
+    color: white;
+}
+
+
+/* Footer */
+
+.redes {
+    justify-content: center;
+}
+
+.redes ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.redes ul li {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 29px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #d8e2dc;
+    transition: all 0.5s ease;
+}
+
+.redes ul li .fa {
+    color: #d8e2dc;
+    margin: 20px;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover.facebook {
+    border: 5px solid #0330c5;
+    box-shadow: 0 0 15px #0330c5;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover .fa-facebook {
+    color: #0330c5;
+    text-shadow: 0 0 15px #0330c5;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover.twitter {
+    border: 5px solid #00C2D1;
+    box-shadow: 0 0 15px 00C2D1;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover .fa-twitter {
+    color: #00C2D1;
+    text-shadow: 0 0 15px #00C2D1;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover.youtube {
+    border: 5px solid #be0000ee;
+    box-shadow: 0 0 15px #be0000ee;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover .fa-youtube {
+    color: #be0000ee;
+    text-shadow: 0 0 15px #be0000ee;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover.instagram {
+    border: 5px solid #ec138e;
+    box-shadow: 0 0 15px #ec138e;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover .fa-instagram {
+    color: #ec138e;
+    text-shadow: 0 0 15px #ec138e;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover.whatsapp {
+    border: 5px solid #4dc247;
+    box-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+}
+
+.redes ul li:hover .fa-whatsapp {
+    color: #4dc247;
+    text-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+}
+
+.ZMK {
+    color: white;
+    bottom: 0;
+}

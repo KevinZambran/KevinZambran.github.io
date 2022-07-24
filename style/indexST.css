@@ -290,14 +290,16 @@ nav ul li a:hover {
     height: 230px;
     background-color: #00000075;
     padding: 10px;
-    margin-bottom: 30px;
+    margin: 10px 30px;
+    width: 170px;
 }
 
 .imgLenguajes {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     padding: 5px;
     margin-bottom: 20px;
+    padding-top: 40px;
 }
 
 .labelLenguajes {
@@ -347,6 +349,7 @@ nav ul li a:hover {
 .descripcion {
     width: 65%;
     float: right;
+    justify-content: space-around;
 }
 
 .imgGit {
@@ -361,11 +364,44 @@ nav ul li a:hover {
     margin-left: 20px;
 }
 
+.desLeng {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desLeng .desLenguaje {
+    display: block;
+}
+
 .circulo {
     width: 25px;
     height: 25px;
     border-radius: 50px;
-    background-color: yellow;
+    background-color: #ffffff;
+}
+
+.circulo-Py {
+    background-color: #ae6c02;
+}
+
+.circulo-Ftt {
+    background-color: #003ab8;
+}
+
+.circulo-Js {
+    background-color: rgb(211, 211, 0);
+}
+
+.circulo-PhP {
+    background-color: #7501be;
+}
+
+.circulo-Java {
+    background-color: #001aff;
+}
+
+.circulo-Cshare {
+    background-color: #c200ab;
 }
 
 .leng {
@@ -383,6 +419,7 @@ nav ul li a:hover {
     text-align: right;
     font-family: var(--fontContent);
     padding-right: 20px;
+    margin-top: 100px;
 }
 
 .linkGit {

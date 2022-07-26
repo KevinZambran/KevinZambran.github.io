@@ -1,10 +1,13 @@
 :root {
     /* colores */
-    --fondo: #0A1045;
-    --navcolor: #F9E900;
+    /* --fondo: #0A1045; */
+    --fondo: #fff;
+    --navcolor: #f9e800a5;
     --titulos: #00C2D1;
     --subTitulos: #ED33B9;
     --fondoAux: #F6AF65;
+    --seccion: #dedcdc87;
+    --fondoAux2: #141860a5;
     /* Fuentes */
     --fontTitle: 'Bangers', cursive;
     --fontContent: 'Tapestry', cursive;
@@ -34,8 +37,11 @@ nav ul {
 }
 
 .logo {
-    color: red;
+    color: var(--navcolor);
     font-size: 20px;
+    border-bottom: 2px solid #001aff2e;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 span {
@@ -49,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #001aff;
     text-decoration: none;
     font-weight: bold;
 }
@@ -75,7 +81,7 @@ nav ul li a:hover {
     float: right;
     width: 50%;
     border-left: 200px solid transparent;
-    border-bottom: 500px solid red;
+    border-bottom: 500px solid var(--titulos);
     display: flex;
     justify-content: center;
 }
@@ -94,22 +100,27 @@ nav ul li a:hover {
 .titulo {
     font-family: var(--fontTitle);
     font-size: 80px;
-    color: white;
+    color: var(--titulos);
     padding-left: 70px
 }
 
 .parrafo {
     font-family: var(--fontContent);
     font-size: 15px;
-    color: white;
     padding-left: 70px;
     text-align: justify;
+    font-weight: 900;
 }
 
 .Contenido {
     width: 100%;
     height: auto;
     text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
 }
 
 .checkbtn {
@@ -129,6 +140,12 @@ nav ul li a:hover {
 .subtitulo {
     color: var(--subTitulos);
     padding: 2px
+}
+
+@media screen and (min-width: 1101px) {
+    .titulo {
+        margin: 8px;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -157,20 +174,27 @@ nav ul li a:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 710px) {
     /* Menu */
+    nav ul li a {
+        color: #fff;
+    }
     .checkbtn {
         display: block;
-        padding-right: 50px;
+        margin-right: 100px;
+    }
+    .logo {
+        border-bottom: 3px solid #fff;
     }
     .menu {
         background: #000;
+        padding-bottom: 2px;
     }
     .menu-ul {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #0330c5;
+        background: rgb(160, 1, 1);
         top: 65px;
         left: 100%;
         text-align: center;
@@ -189,7 +213,7 @@ nav ul li a:hover {
     .menu-li .menu-a:hover,
     .menu-li .menu-a.active {
         background: none;
-        color: red;
+        color: #c4d202;
     }
     #check:checked~.menu-ul {
         left: 0;
@@ -250,7 +274,7 @@ nav ul li a:hover {
 
 .datos {
     height: auto;
-    background-color: #080c33;
+    background-color: var(--seccion);
     text-align: center;
     padding: 5px;
 }
@@ -262,9 +286,16 @@ nav ul li a:hover {
 .dato-list {
     list-style: none;
     font-family: var(--fontContent);
-    color: white;
     font-size: 35px;
     padding: 5px;
+}
+
+@media screen and (max-width: 710px) {
+    .datos {
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -284,14 +315,17 @@ nav ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    padding: 10px;
 }
 
 .lenguajeItems {
     height: 230px;
-    background-color: #00000075;
+    background-color: var(--fondoAux2);
     padding: 10px;
     margin: 10px 30px;
     width: 170px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #b4a805a5;
 }
 
 .imgLenguajes {
@@ -303,7 +337,7 @@ nav ul li a:hover {
 }
 
 .labelLenguajes {
-    color: white;
+    color: #001aff;
     display: block;
     font-size: 35px;
     font-family: var(--fontContent);
@@ -313,14 +347,19 @@ nav ul li a:hover {
 
 /* Proyectos */
 
+.container-grid {
+    display: flex;
+}
+
 .Contenido2 {
-    background: #080c33;
+    background: var(--seccion);
     height: auto;
     text-align: center;
     padding: 10px;
 }
 
 .listProyectos {
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -330,10 +369,11 @@ nav ul li a:hover {
 .proyectoItem {
     width: 550px;
     height: 200px;
-    background-color: rgba(20, 24, 96, 0.649);
+    background-color: #141860a5;
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
+    border-radius: 10px;
 }
 
 .imgGitHub {
@@ -426,6 +466,75 @@ nav ul li a:hover {
     color: white;
 }
 
+.proyecto-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.btn-project-view {
+    border: none;
+    padding: 15px;
+    background-color: var(--subTitulos);
+    border-radius: 10px;
+    color: white;
+    border-bottom: 5px solid #930182;
+    border-right: 3px solid #930182;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.proyecto-info .detail {
+    text-align: justify;
+}
+
+.button-project-view {
+    display: inline-table;
+}
+
+.linkGitPerfil {
+    color: #141860a5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+    .container-grid {
+        flex-direction: column;
+    }
+    .listProyectos {
+        width: 100%;
+    }
+    .subtitulo2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .desLeng {
+        flex-direction: column;
+    }
+    .leng {
+        font-size: 15px;
+    }
+    .circulo {
+        width: 15px;
+        height: 15px;
+    }
+    .linkproyecto {
+        padding-left: 0;
+        margin: 0;
+    }
+    .linkGit {
+        font-size: 15px;
+    }
+}
+
 
 /* Footer */
 
@@ -448,12 +557,12 @@ nav ul li a:hover {
     text-align: center;
     cursor: pointer;
     border-radius: 50%;
-    border: 5px solid #d8e2dc;
+    border: 5px solid #00000081;
     transition: all 0.5s ease;
 }
 
 .redes ul li .fa {
-    color: #d8e2dc;
+    color: #00000081;
     margin: 20px;
     transition: all 0.5s ease;
 }
@@ -519,7 +628,7 @@ nav ul li a:hover {
 }
 
 .ZMK {
-    color: white;
+    color: #000;
     bottom: 0;
 }
 

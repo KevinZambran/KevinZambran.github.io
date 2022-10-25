@@ -10,95 +10,117 @@ navToggle.addEventListener("click", () => {
 // Filtros
 // ALL
 document.getElementById('all').onclick = function() {
-    var py = document.getElementById('python');
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'flex';
-    jv.style.display = 'flex';
-    php.style.display = 'flex';
-    ftt.style.display = 'flex';
-    cshare.style.display = 'flex';
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'flex';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'flex';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'flex';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'flex';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'flex';
+    }
 
 }
 
 // PYTHON
 document.getElementById('py').onclick = function() {
-    var py = document.getElementById('python');
-
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'flex';
-    jv.style.display = 'none';
-    php.style.display = 'none';
-    ftt.style.display = 'none';
-    cshare.style.display = 'none';
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'flex';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'none';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'none';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'none';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'none';
+    }
 
 }
 
 //JAVA
 document.getElementById('java').onclick = function() {
-    var py = document.getElementById('python');
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'none';
-    jv.style.display = 'flex';
-    php.style.display = 'none';
-    ftt.style.display = 'none';
-    cshare.style.display = 'none';
-
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'none';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'none';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'flex';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'none';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'none';
+    }
 }
 
 
 //PHP
 document.getElementById('php').onclick = function() {
-    var py = document.getElementById('python');
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'none';
-    jv.style.display = 'none';
-    php.style.display = 'flex';
-    ftt.style.display = 'none';
-    cshare.style.display = 'none';
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'none';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'flex';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'none';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'none';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'none';
+    }
 }
 
 //FLUTTER
 document.getElementById('ftt').onclick = function() {
-    var py = document.getElementById('python');
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'none';
-    jv.style.display = 'none';
-    php.style.display = 'none';
-    ftt.style.display = 'flex';
-    cshare.style.display = 'none';
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'none';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'none';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'none';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'flex';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'none';
+    }
 }
 
 //SeeShare
 document.getElementById('see_share').onclick = function() {
-    var py = document.getElementById('python');
-    var php = document.getElementById('Php');
-    var jv = document.getElementById('Java');
-    var ftt = document.getElementById('flutter');
-    var cshare = document.getElementById('Seeshare');
-
-    py.style.display = 'none';
-    jv.style.display = 'none';
-    php.style.display = 'none';
-    ftt.style.display = 'none';
-    cshare.style.display = 'flex';
+    if (document.getElementById("python")) {
+        document.getElementById('python').style.display = 'none';
+    }
+    if (document.getElementById("Php")) {
+        document.getElementById('Php').style.display = 'none';
+    }
+    if (document.getElementById("Java")) {
+        document.getElementById('Java').style.display = 'none';
+    }
+    if (document.getElementById("flutter")) {
+        document.getElementById('flutter').style.display = 'none';
+    }
+    if (document.getElementById("Seeshare")) {
+        document.getElementById('Seeshare').style.display = 'flex';
+    }
 }
